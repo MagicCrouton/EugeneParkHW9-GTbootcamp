@@ -17,10 +17,10 @@ ${response.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#Contributing)
-- [How-to-Contribute](#How-to-contribute)
-- [Tests](#Tests)
-- [Questions](#Questions)
+- [Contributing](#contributing)
+- [How-to-Contribute](#how-to-contribute)
+- [Tests](#tests)
+- [Questions](#questions)
 - [License](#license)
 
 ## Installation
