@@ -7,9 +7,17 @@ const fs = require('fs');
 const questions = [
       {
         type: 'input',
+        name: 'ReadmeTitle',
+        message: 'what will you call this readme?',
+      },   
+      {
+        type: 'input',
         name: 'repoLink',
         message: 'what is your github repo link?',
       },
+//   break here to generate template of readme (these "break" points are just here to guide me to ensure i 
+// understand and hit all the acceptancec criteria
+// it does not mean i am stopping the app here to build as i go or i may)
       {
         type: 'input',
         name: 'title',
@@ -40,12 +48,14 @@ const questions = [
         name: 'testInstructions',
         message: 'what are the testing instructions?',
       },
+// break here to fill sections
       {
         type: 'list',
         message: 'Which License do you want to add?',
         name: 'license',
         choices: ['MIT', 'ETC', 'ETC'],
       },
+// break here to input license file and add badge to readme
       {
         type: 'input',
         name: 'gitUserName',
@@ -59,10 +69,14 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+inquirer.prompt(questions);
+}
 
 // Function call to initialize app
 init();
