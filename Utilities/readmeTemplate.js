@@ -1,9 +1,13 @@
 // Just modularized the readme file into a function to be exported to be used in the main index.js this 
 // way the readme template can be edited outside of the main Script
+const license = require('./licenseModule.js');
+
 
 function readmeTemplate(response) {
+
 let x = 
 `# ${response.title}
+${license.badge(response)}
 
 ## Description
 
@@ -41,11 +45,12 @@ ${response.tests}
 
 ## Questions
 
-for any questions please email inqueries to ${response.email}
+For any questions refer to the ${response.gitUserName} repository ${response.repoLink} 
+or email inqueries to ${response.email}
 
 ## License
 
-${response.license}`
+This application is covered under the ${response.license} license`
 
 return x}
 

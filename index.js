@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const rTemplate = require('./readmeTemplate.js');
+const rTemplate = require('./Utilities/readmeTemplate');
 
 // TODO: Create an array of questions for user input
 // this is the inquier prompt list needed.
@@ -54,12 +54,12 @@ const questions = [
         name: 'testInstructions',
         message: 'what are the testing instructions?',
       },
-// break here to fill sections
+// I chose three licenses but this can be expanded on.
       {
         type: 'list',
         message: 'Which License do you want to add?',
         name: 'license',
-        choices: ['MIT', 'ETC', 'ETC'],
+        choices: ['MIT', 'APACHE', 'GNU'],
       },
 // break here to input license file and add badge to readme
       {
