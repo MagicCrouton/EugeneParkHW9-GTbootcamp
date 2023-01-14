@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const rTemplate = require('./readmeTemplate.js');
 
 // TODO: Create an array of questions for user input
 // this is the inquier prompt list needed.
@@ -75,51 +76,8 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-let tempREADME = 
-`# ${data.title}
-
-## Description
-
-${data.description}
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#Contributing)
-- [How-to-Contribute](#How-to-contribute)
-- [Tests](#Tests)
-- [Questions](#Questions)
-- [License](#license)
-
-## Installation
-
-${data.installation}
-
-## Usage
-
-${data.usage}
-
-## Contributing
-
-${data.credits}
-
-## How-to-contribute
-
-${data.contributionInstruction}
-
-## Tests
-
-${data.tests}
-
-## Questions
-
-for any questions please email inqueries to ${data.email}
-
-## License
-
-${data.license}`
-
+    let tempREADME = rTemplate.readmeTemplate(data);
+    // console.log(tempREADME);
     fs.writeFile(`./READMEOutput/${fileName}.md`, tempREADME, (err) => {
         err ? console.log(err) : console.log(`you've sucessfully written ${data.ReadmeTitle}`)
     } )
@@ -129,7 +87,6 @@ ${data.license}`
 function init() {
 inquirer.prompt(questions)
 .then((response) => {
-
 writeToFile(response.ReadmeTitle, response)
 })
 }
