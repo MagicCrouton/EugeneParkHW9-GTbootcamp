@@ -37,11 +37,11 @@ ${response.credits}
 
 ## How-to-contribute
 
-${response.contributionInstruction}
+${response.contributionInstructions}
 
 ## Tests
 
-${response.tests}
+${response.testInstructions}
 
 ## Questions
 
