@@ -33,11 +33,11 @@ N/A
 
 ## How-to-contribute
 
-undefined
+N/A
 
 ## Tests
 
-undefined
+TBD
 
 ## Questions
 

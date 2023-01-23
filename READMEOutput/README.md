@@ -29,11 +29,11 @@ N/A
 
 ## How-to-contribute
 
-undefined
+N/A
 
 ## Tests
 
-undefined
+Tests are located in the test foler and are initialized by CLI command npx jest.
 
 ## Questions
 
